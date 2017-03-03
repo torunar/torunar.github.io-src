@@ -9,6 +9,4 @@
 
 [Исходный код](https://bitbucket.org/torunar/mobile-gelbooru) ресурса выложен на Bitbucket — feel free to collaborate.
 
-Стабильность ресурса должна подрасти.
-
 Оставайтесь тунцов.
