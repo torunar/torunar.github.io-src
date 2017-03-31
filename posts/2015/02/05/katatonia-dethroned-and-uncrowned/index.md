@@ -8,17 +8,8 @@
 
 Почему смешной? А сравним-ка его с предыдущим альбомом, «Dead End Kings», который, [как я уже писал](http://torunar.tk/post/35904128136/dance-of-december-souls), был весьма и весьма хорош.
 
-<table>
-<thead>
-<tr>
-<th style="width: 50%;">«Dead End Kings», 2012</th>
-<th style="width: 50%;">«Dethroned and Uncrowned», 2013</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>
-            
+### Dead End Kings, 2012
+    
 1. The Parting
 2. The One You Are Looking For Is Not Here
 3. Hypnone
@@ -31,10 +22,8 @@
 10. First Prayer
 11. Dead Letters
 12. The Act Of Darkening
-
-</td>
-<td>
-            
+    
+### Dethroned and Uncrowned, 2013
 1. The Parting
 2. The One You Are Looking For Is Not Here
 3. Hypnone
@@ -46,12 +35,7 @@
 9. Lethean
 10. First Prayer
 11. Dead Letters
- 
-</td>
-</tr>
-</tbody>
-</table>
-
+    
 The resemblance is uncanny!
 
 В общем, под обложкой (красивой, кстати) нового альбома скрываются ремиксы на почти все треки с предыдущего альбома. Я не хочу сказать, что это плохо — многие вещи звучат не хуже оригинала. Для сравнения:
