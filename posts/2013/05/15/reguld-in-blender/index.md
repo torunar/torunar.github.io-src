@@ -20,6 +20,6 @@
 
 Последние 4 дня упорно точил по 3-4 часа в день скелет модели и анимацию. Результат получился таким, каким и планировался:
 
-<iframe width="100%" height="500" src="https://www.youtube.com/embed/O2vh6-FvnEc?rel=0" frameborder="0"></iframe>
+<iframe width="100%" height="500" src="https://www.youtube-nocookie.com/embed/xYtX69y-MLM" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
 
 Пока ковырялся с Регульдом, понял, что моделирование — это, черт побери, интересно! К завершающей стадии осознал, как много глупостей в процессе работы понаделал, и в следующий раз смогу обезопасить себя от выстрелов в ногу.
