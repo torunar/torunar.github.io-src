@@ -10,5 +10,5 @@ pipelines:
             variables:
               SSH_USER: $SSH_USER
               SERVER: $SSH_SERVER
-              COMMAND: '~/torunar.sh'
+              COMMAND: "~/torunar.sh -$BITBUCKET_BRANCH"
               PORT: $SSH_PORT
