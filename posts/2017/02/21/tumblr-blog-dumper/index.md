@@ -15,7 +15,7 @@
 Для решения этой задачи я сел писать тулзу на PHP.
 В сети есть [немало](https://github.com/search?l=PHP&q=tumblr&type=Repositories) библиотек для работы с API Tumblr, в том числе, [от самих Tumblr](https://github.com/tumblr/tumblr.php) — именно на базе нее я и запилил свое решение.
 
-Работа была проделана за неделю–две, в результате на свет родилась библиотека [BlogDumper](https://bitbucket.org/torunar/blog.dumper) и одноименная утилита.
+Работа была проделана за неделю–две, в результате на свет родилась библиотека [BlogDumper](https://github.com/torunar/blog.dumper) и одноименная утилита.
 
 Возможности:
 

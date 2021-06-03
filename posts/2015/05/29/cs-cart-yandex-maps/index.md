@@ -8,4 +8,4 @@
 
 На вставленной карте можно разместить маркер объекта с пояснением, отображающемся во всплывающем окне при клике на маркер.
 
-Модуль совместим с CS-Cart/Multi-Vendor версии 4.x.x и доступен в моем [репозитории](https://bitbucket.org/torunar/cs-cart-addons/src/) с модулями для CS-Cart.
+Модуль совместим с CS-Cart/Multi-Vendor версии 4.x.x и доступен в моем [репозитории](https://github.com/torunar/cs-cart-addons/src/) с модулями для CS-Cart.

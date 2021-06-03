@@ -80,13 +80,13 @@
 * Reset — Escape;
 * Start — Enter.
 
-Исходный код скетча: [https://bitbucket.org/torunar/arduinopad](https://bitbucket.org/torunar/arduinopad)
+Исходный код скетча: [https://github.com/torunar/arduinopad](https://github.com/torunar/arduinopad)
 
 ## Контроллер в действии
 
-<iframe width="100%" 
-        height="415" 
-        src="https://www.youtube-nocookie.com/embed/gu27QGko9sk?rel=0" 
-        frameborder="0" 
+<iframe width="100%"
+        height="415"
+        src="https://www.youtube-nocookie.com/embed/gu27QGko9sk?rel=0"
+        frameborder="0"
         allow="autoplay; encrypted-media" allowfullscreen
 ></iframe>
