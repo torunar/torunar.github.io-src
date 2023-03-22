@@ -1,0 +1,52 @@
+name: Deploy
+
+on: workflow_dispatch
+
+jobs:
+  main:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v3
+      with:
+        submodules: true
+
+    - name: Prepare Cider
+      run: chmod +x "${GITHUB_WORKSPACE}/cider/cider.sh"
+
+    - name: Install dependencies
+      run: sudo apt install -y markdown webp
+
+    - name: Build
+      run: ${GITHUB_WORKSPACE}/cider/cider.sh -i="${GITHUB_WORKSPACE}/posts" -o="${GITHUB_WORKSPACE}/www" -l="${GITHUB_WORKSPACE}/cider_localization.sh" -c="${GITHUB_WORKSPACE}/cider_config.sh"
+
+    - name: Convert images
+      run: for i in $(find "${GITHUB_WORKSPACE}/www" -name '*.jpg' -o -name '*.png'); do cwebp -quiet -q 95 $i -o $i.webp; done
+
+    - name: Compress WWW
+      run: tar czf ${GITHUB_WORKSPACE}/www.tgz -C ${GITHUB_WORKSPACE}/www .
+
+    - name: Upload WWW
+      env:
+        DEPLOYMENT_HOST: ${{ secrets.DEPLOYMENT_HOST }}
+        DEPLOYMENT_PORT: ${{ secrets.DEPLOYMENT_PORT }}
+        DEPLOYMENT_USER: ${{ secrets.DEPLOYMENT_USER }}
+        DEPLOYMENT_PASSWORD: ${{ secrets.DEPLOYMENT_PASSWORD }}
+      run: sshpass -p $DEPLOYMENT_PASSWORD scp -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null -P $DEPLOYMENT_PORT ${GITHUB_WORKSPACE}/www.tgz $DEPLOYMENT_USER@$DEPLOYMENT_HOST:~
+
+    - name: Replace WWW on server
+      env:
+        DEPLOYMENT_HOST: ${{ secrets.DEPLOYMENT_HOST }}
+        DEPLOYMENT_PORT: ${{ secrets.DEPLOYMENT_PORT }}
+        DEPLOYMENT_USER: ${{ secrets.DEPLOYMENT_USER }}
+        DEPLOYMENT_PASSWORD: ${{ secrets.DEPLOYMENT_PASSWORD }}
+      run: sshpass -p $DEPLOYMENT_PASSWORD ssh -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null $DEPLOYMENT_USER@$DEPLOYMENT_HOST -p $DEPLOYMENT_PORT 'tar xzf www.tgz -C /var/www/torunar.ml'
+
+    - name: Clean up
+      env:
+        DEPLOYMENT_HOST: ${{ secrets.DEPLOYMENT_HOST }}
+        DEPLOYMENT_PORT: ${{ secrets.DEPLOYMENT_PORT }}
+        DEPLOYMENT_USER: ${{ secrets.DEPLOYMENT_USER }}
+        DEPLOYMENT_PASSWORD: ${{ secrets.DEPLOYMENT_PASSWORD }}
+      run: sshpass -p $DEPLOYMENT_PASSWORD ssh -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null $DEPLOYMENT_USER@$DEPLOYMENT_HOST -p $DEPLOYMENT_PORT 'rm -f ~/www.tgz'
