@@ -15,9 +15,6 @@ jobs:
     - name: Prepare Cider
       run: chmod +x "${GITHUB_WORKSPACE}/cider/cider.sh"
 
-    - name: Prepare build dir
-      run: mkdir -p "${GITHUB_WORKSPACE}/www"
-
     - name: Install dependencies
       run: sudo apt install -y markdown webp
 
