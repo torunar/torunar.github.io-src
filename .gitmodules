@@ -1,3 +1,4 @@
 [submodule "cider"]
 	path = cider
 	url = https://github.com/torunar/cider.git
+	branch = master
