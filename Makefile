@@ -1,9 +1,3 @@
-clean:
-	rm -rf ${HOME}/src/torunar.ml/www
-
-init: clean
-	mkdir -p ${HOME}/src/torunar.ml/www
-
 build: init
 	~/src/cider/cider.sh \
 		-c="${HOME}/src/torunar.ml/cider_config.sh" \
@@ -13,3 +7,12 @@ build: init
 		-t="brut" \
 		-p=10 \
 		-H="http://localhost:8888"
+
+init: clean
+	mkdir -p ${HOME}/src/torunar.ml/www
+
+clean:
+	rm -rf ${HOME}/src/torunar.ml/www
+
+serve:
+	php -S 0.0.0.0:8888 -t ~/src/torunar.ml/www
