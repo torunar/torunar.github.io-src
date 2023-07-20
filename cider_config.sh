@@ -1,1 +1,1 @@
-CIDER_host="https://torunar.ml"
+CIDER_host="https://torunar.github.io"
