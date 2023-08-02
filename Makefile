@@ -1,18 +1,22 @@
 build: init
 	~/src/cider/cider.sh \
-		-c="${HOME}/src/torunar.ml/cider_config.sh" \
-		-l="${HOME}/src/torunar.ml/cider_localization.sh" \
-		-i="${HOME}/src/torunar.ml/posts" \
-		-o="${HOME}/src/torunar.ml/www" \
+		-c="${HOME}/src/torunar.github.io-src/cider_config.sh" \
+		-l="${HOME}/src/torunar.github.io-src/cider_localization.sh" \
+		-i="${HOME}/src/torunar.github.io-src/posts" \
+		-o="${HOME}/src/torunar.github.io-src/www" \
 		-t="brut" \
 		-p=10 \
 		-H="http://localhost:8888"
 
 init: clean
-	mkdir -p ${HOME}/src/torunar.ml/www
+	mkdir -p "${HOME}/src/torunar.github.io-src/www"
 
 clean:
-	rm -rf ${HOME}/src/torunar.ml/www
+	rm -rf "${HOME}/src/torunar.github.io-src/www"
+	git checkout "${HOME}/src/torunar.github.io-src/www"
 
 serve:
-	php -S 0.0.0.0:8888 -t ~/src/torunar.ml/www
+	php -S 0.0.0.0:8888 -t ~/src/torunar.github.io-src/www
+
+update:
+	git submodule update --remote
