@@ -8,12 +8,10 @@ build: init
 		-p=10 \
 		-H="http://localhost:8888"
 
-init: clean
-	mkdir -p "${HOME}/src/torunar.github.io-src/www"
-
-clean:
-	rm -rf "${HOME}/src/torunar.github.io-src/www"
-	git checkout "${HOME}/src/torunar.github.io-src/www"
+init:
+	mkdir -p ~/src/torunar.github.io-src/www
+	rm -rf ~/src/torunar.github.io-src/www/*
+	git checkout ~/src/torunar.github.io-src/www
 
 serve:
 	php -S 0.0.0.0:8888 -t ~/src/torunar.github.io-src/www
