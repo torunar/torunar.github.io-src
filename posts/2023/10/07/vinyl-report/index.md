@@ -26,7 +26,7 @@ Baby's first death-doom.
 
 Спустя столько лет после первого знакомства все же треки, что помогли полюбить этот альбом, заставляют возвращаться к нему снова и снова: под Without God все еще восхитительно орется, а Velvet Thorns of Drynwhyl все еще очень эпичная и образная.
 
-## Edward Grieg — Peer Gynt
+## Edvard Grieg — Peer Gynt
 
 ![](./img/03.jpg)
 
