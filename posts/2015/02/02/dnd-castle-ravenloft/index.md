@@ -38,9 +38,6 @@
 [![](./img/12_pre.jpg)](./img/12.jpg)
 [![](./img/13_pre.jpg)](./img/13.jpg)
 [![](./img/14_pre.jpg)](./img/14.jpg)
-</span>
-
-<span class="gallery-4">
 [![](./img/15_pre.jpg)](./img/15.jpg)
 [![](./img/16_pre.jpg)](./img/16.jpg)
 [![](./img/17_pre.jpg)](./img/17.jpg)
@@ -57,9 +54,6 @@
 <span class="gallery-2">
 [![](./img/02_pre.jpg)](./img/02.jpg)
 [![](./img/05_pre.jpg)](./img/05.jpg)
-</span>
-
-<span class="gallery-2">
 [![](./img/06_pre.jpg)](./img/06.jpg)
 [![](./img/07_pre.jpg)](./img/07.jpg)
 </span>
@@ -71,12 +65,8 @@
 [![](./img/04_pre.jpg)](./img/04.jpg)
 </span>
 
-<span class="gallery-1">
 [![](./img/08_pre.jpg)](./img/08.jpg)
-</span>
 
 Пройдя первый — по сути, обучающий — сценарий, с нетерпением ждем возможности собраться снова и перейти к настоящей игре, с боссами и артефактами, дополнительными факторами и заданиями, усложняющими игру и делающими ее более захватывающей.
 
-<span class="gallery-1">
 ![](./img/badass.jpg)
-</span>
