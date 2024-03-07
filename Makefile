@@ -1,5 +1,5 @@
 build: init
-	~/src/cider/cider.sh \
+	~/src/torunar.github.io-src/cider/cider.sh \
 		-c="${HOME}/src/torunar.github.io-src/cider_config.sh" \
 		-l="${HOME}/src/torunar.github.io-src/cider_localization.sh" \
 		-i="${HOME}/src/torunar.github.io-src/posts" \
