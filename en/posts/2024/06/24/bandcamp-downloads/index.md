@@ -6,8 +6,6 @@
 
 ***
 
-_This post was originally published in English, but is also accessible in [Russian](/2024/06/24/bandcamp-downloads/)._
-
 _**Disclaimer**: It turned out to be much longer and personal than I originally expected._
 _I decided to keep it this way, but if you came here only for programming stuff, you are more than welcome to [skip to technical details](#technical)._
 

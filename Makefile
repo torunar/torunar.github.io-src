@@ -1,12 +1,20 @@
 build: init
 	~/src/torunar.github.io-src/cider/cider.sh \
-		-c="${HOME}/src/torunar.github.io-src/cider_config.sh" \
-		-l="${HOME}/src/torunar.github.io-src/cider_localization.sh" \
-		-i="${HOME}/src/torunar.github.io-src/posts" \
+		-c="${HOME}/src/torunar.github.io-src/ru/config.sh" \
+		-l="${HOME}/src/torunar.github.io-src/ru/localization.sh" \
+		-i="${HOME}/src/torunar.github.io-src/ru/posts" \
 		-o="${HOME}/src/torunar.github.io-src/www" \
 		-t="brut" \
 		-p=10 \
 		-H="http://localhost:8888"
+	~/src/torunar.github.io-src/cider/cider.sh \
+		-c="${HOME}/src/torunar.github.io-src/en/config.sh" \
+		-l="${HOME}/src/torunar.github.io-src/en/localization.sh" \
+		-i="${HOME}/src/torunar.github.io-src/en/posts" \
+		-o="${HOME}/src/torunar.github.io-src/www/en" \
+		-t="brut" \
+		-p=10 \
+		-H="http://localhost:8888/en"
 
 init:
 	mkdir -p ~/src/torunar.github.io-src/www

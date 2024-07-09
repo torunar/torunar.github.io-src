@@ -20,7 +20,9 @@ jobs:
       run: sudo apt install -y markdown
 
     - name: Build
-      run: ${GITHUB_WORKSPACE}/cider/cider.sh -i="${GITHUB_WORKSPACE}/posts" -o="${GITHUB_WORKSPACE}/www" -l="${GITHUB_WORKSPACE}/cider_localization.sh" -c="${GITHUB_WORKSPACE}/cider_config.sh"
+      run: |
+        ${GITHUB_WORKSPACE}/cider/cider.sh -i="${GITHUB_WORKSPACE}/ru/posts" -o="${GITHUB_WORKSPACE}/www" -l="${GITHUB_WORKSPACE}/ru/localization.sh" -c="${GITHUB_WORKSPACE}/ru/config.sh"
+        ${GITHUB_WORKSPACE}/cider/cider.sh -i="${GITHUB_WORKSPACE}/en/posts" -o="${GITHUB_WORKSPACE}/www/en" -l="${GITHUB_WORKSPACE}/en/localization.sh" -c="${GITHUB_WORKSPACE}/en/config.sh"
 
     - name: Upload to GitHub Pages
       uses: cpina/github-action-push-to-another-repository@main
