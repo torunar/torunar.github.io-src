@@ -43,12 +43,12 @@
     fi
 
 Коробка подключена к телевизору с экраном 40" и разрешением 1920х1080.
-С дивана в полутора метрах от телевизора интерфейс мелковат, поэтому сделал [отдельную тему](https://github.com/torunar/raspberry-pi-media-box/.fluxbox/styles/TV/theme.cfg) для Fluxbox и настроил масштабирование для GTK и QT приложений в `~/.bashrc`:
+С дивана в полутора метрах от телевизора интерфейс мелковат, поэтому сделал [отдельную тему](https://github.com/torunar/raspberry-pi-media-box/blob/master/.fluxbox/styles/TV/theme.cfg) для Fluxbox и настроил масштабирование для GTK и QT приложений в `~/.bashrc`:
 
     export GDK_SCALE=2
     export QT_SCALE_FACTOR=2
     
-По мелочи еще подкрутил меню, автозапуск, все это тоже в репозитории можно посмотреть: [torunar/raspberry-pi-media-box](https://github.com/torunar/raspberry-pi-media-box/.fluxbox).
+По мелочи еще подкрутил меню, автозапуск, все это тоже в репозитории можно посмотреть: [torunar/raspberry-pi-media-box](https://github.com/torunar/raspberry-pi-media-box/blob/master/.fluxbox/).
 
 Для просмотра YouTube установил клиент [FreeTube](https://freetubeapp.io/), которым до этого пользовался на Windows, а для кино и сериалов взял VLC, потому что в нем есть ряд хаков для нормальной производительности на RPi.
 Как файловый менеджер выбрал привычный Thunar; экранная клавиатура — легковесная `matchbox-keyboard`.
@@ -63,12 +63,12 @@ RPi без проблем подхватил USB аудио устройство
 Как все это выглядит в сборе:
 
 <span class="gallery-2">
-[![Рабочий стол с меню](./img/desktop.png)](./img/fluxbox.png)
-[![Терминал с клавиатурой](./img/terminal.png)](./img/zutty.png)
+[![Рабочий стол с меню](./img/desktop.png)](./img/desktop.png)
+[![Терминал с клавиатурой](./img/terminal.png)](./img/terminal.png)
 </span>
 
 <span class="gallery-2">
-[![Файлы](./img/files.png)](./img/thunar.png)
+[![Файлы](./img/files.png)](./img/files.png)
 [![FreeTube](./img/freetube.png)](./img/freetube.png)
 </span>
 
