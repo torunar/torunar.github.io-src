@@ -61,10 +61,9 @@
 Такого у нас еще не было!
 Зацените, как это улетно выглядит:
 
-<span class="gallery-2">
 <iframe width="100%" src="https://www.youtube-nocookie.com/embed/uIbiNq9djRA?si=o3pBkalbYfkKxVBr"></iframe>
+
 <iframe width="100%" src="https://www.youtube-nocookie.com/embed/r2Mr4Y64mEg?si=BWT92bg-suBochXd"></iframe>
-</span>
 
 Важный момент: для плавного воспроизведения проигрыватель нужно переключить с 33 оборотов в минуту на 45, снять иглу с диска, потушить свет в комнате и осветить поверхность стробоскопическим светом с частотой 40 герц.
 Так что слушать музыку одновременно с просмотром волшебных картинок не выйдет.
