@@ -71,7 +71,7 @@ Bandcamp don't seriously expect me to go through the manual download process for
 Even if they do, I'm pretty sure there is a way to work it around.
 Let's go to a [free album page](https://sugarwounds.bandcamp.com/album/mechanical-friends-remastered), ask for a download and see where Bandcamp redirect me:
 
-    https://bandcamp.com/download?id=472457604&ts=1719170366.294537336&tsig=5e1411c3cc4ffe2b0c02b31ffb0e60de&type=album
+    https://bandcamp.com/download?fsig=77686c7dbbb424293baf4778413c0c75&id=472457604&ts=1748365969.4170256067&type=album
 
 Okay, the URL has something that looks like an album ID, some token and signature.
 Downloading different albums gives different IDs, token and signature change every time, so I can't hardcode them.
@@ -85,7 +85,7 @@ From my previous encounters with Bandcamp, I know that it stores album informati
       "art_id": 3553041759,
       "packages": null,
       "defaultPrice": 7.0,
-      "freeDownloadPage": "https://bandcamp.com/download?id=472457604&ts=1719170366.294537336&tsig=5e1411c3cc4ffe2b0c02b31ffb0e60de&type=album",
+      "freeDownloadPage": "https://bandcamp.com/download?fsig=77686c7dbbb424293baf4778413c0c75&id=472457604&ts=1748365969.4170256067&type=album",
       "FREE": 1,
       "PAID": 2,
       "artist": "Sugar Wounds",
@@ -198,7 +198,7 @@ Maybe I will, the whole download process seems to be easy enough to handle in a 
     ITEM_URL="${1}"
     
     FREE_DL_PAGE_URL=$(curl -sq "${ITEM_URL}" \
-        | sed -nE -e 's/^.+(https:\/\/bandcamp.com\/download\?id=[0-9]+&amp;ts=[0-9]+.[0-9]+&amp;tsig=[a-z0-9]+&amp;type=album).+/\1/p' \
+        | sed -nE -e 's/^.+(https:\/\/bandcamp.com\/download\?fsig=[a-z0-9]+&amp;id=[0-9]+&amp;ts=[0-9]+.[0-9]+&amp;type=album).+/\1/p' \
         | sed 's/&amp;/\&/g' \
     )
     

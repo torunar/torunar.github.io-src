@@ -70,7 +70,7 @@ Bandcamp понимают, что у кого есть желание пират
 Даже так, наверняка это можно как-то обойти.
 Так что идем на страницу [какого-нибудь бесплатного альбома](https://sugarwounds.bandcamp.com/album/mechanical-friends-remastered), выбираем бесплатную загрузку и смотрим, куда нас редиректит:
 
-    https://bandcamp.com/download?id=472457604&ts=1719170366.294537336&tsig=5e1411c3cc4ffe2b0c02b31ffb0e60de&type=album
+    https://bandcamp.com/download?fsig=77686c7dbbb424293baf4778413c0c75&id=472457604&ts=1748365969.4170256067&type=album
 
 Так, в URL'е есть ID альбома, какие-то токен и подпись.
 У разных альбомов разные ID, а токен и подпись вообще каждый раз меняются, их захардкодить нигде не получится.
@@ -84,7 +84,7 @@ Bandcamp понимают, что у кого есть желание пират
       "art_id": 3553041759,
       "packages": null,
       "defaultPrice": 7.0,
-      "freeDownloadPage": "https://bandcamp.com/download?id=472457604&ts=1719170366.294537336&tsig=5e1411c3cc4ffe2b0c02b31ffb0e60de&type=album",
+      "freeDownloadPage": "https://bandcamp.com/download?fsig=77686c7dbbb424293baf4778413c0c75&id=472457604&ts=1748365969.4170256067&type=album",
       "FREE": 1,
       "PAID": 2,
       "artist": "Sugar Wounds",
@@ -197,7 +197,7 @@ Bandcamp, пожалуйста, не меняйся.
     ITEM_URL="${1}"
     
     FREE_DL_PAGE_URL=$(curl -sq "${ITEM_URL}" \
-        | sed -nE -e 's/^.+(https:\/\/bandcamp.com\/download\?id=[0-9]+&amp;ts=[0-9]+.[0-9]+&amp;tsig=[a-z0-9]+&amp;type=album).+/\1/p' \
+        | sed -nE -e 's/^.+(https:\/\/bandcamp.com\/download\?fsig=[a-z0-9]+&amp;id=[0-9]+&amp;ts=[0-9]+.[0-9]+&amp;type=album).+/\1/p' \
         | sed 's/&amp;/\&/g' \
     )
     
