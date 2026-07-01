@@ -37,55 +37,49 @@ The profile is specified via `-P {profile name}` parameter.
 
 Entry for the `home` profile: (`~/.local/share/applications/firefox-home.desktop`):
 
-```
-[Desktop Entry]
-Version=1.0
-Type=Application
-Exec=firefox -P home %u
-Terminal=false
-X-MultipleArgs=false
-Icon=firefox
-StartupWMClass=firefox
-Categories=GNOME;GTK;Network;WebBrowser;
-MimeType=application/json;application/pdf;application/rdf+xml;application/rss+xml;application/x-xpinstall;application/xhtml+xml;application/xml;audio/flac;audio/ogg;audio/webm;image/avif;image/gif;image/jpeg;image/png;image/svg+xml;image/webp;text/html;text/xml;video/ogg;video/webm;x-scheme-handler/chrome;x-scheme-handler/http;x-scheme-handler/https;x-scheme-handler/mailto;
-StartupNotify=true
-Name=Firefox (Home)
-```
+    [Desktop Entry]
+    Version=1.0
+    Type=Application
+    Exec=firefox -P home %u
+    Terminal=false
+    X-MultipleArgs=false
+    Icon=firefox
+    StartupWMClass=firefox
+    Categories=GNOME;GTK;Network;WebBrowser;
+    MimeType=application/json;application/pdf;application/rdf+xml;application/rss+xml;application/x-xpinstall;application/xhtml+xml;application/xml;audio/flac;audio/ogg;audio/webm;image/avif;image/gif;image/jpeg;image/png;image/svg+xml;image/webp;text/html;text/xml;video/ogg;video/webm;x-scheme-handler/chrome;x-scheme-handler/http;x-scheme-handler/https;x-scheme-handler/mailto;
+    StartupNotify=true
+    Name=Firefox (Home)
 
 Entry for the `work` profile (`~/.local/share/applications/firefox-work.desktop`):
 
-```
-[Desktop Entry]
-Version=1.0
-Type=Application
-Exec=firefox -P work %u
-Terminal=false
-X-MultipleArgs=false
-Icon=firefox
-StartupWMClass=firefox
-Categories=GNOME;GTK;Network;WebBrowser;
-MimeType=application/json;application/pdf;application/rdf+xml;application/rss+xml;application/x-xpinstall;application/xhtml+xml;application/xml;audio/flac;audio/ogg;audio/webm;image/avif;image/gif;image/jpeg;image/png;image/svg+xml;image/webp;text/html;text/xml;video/ogg;video/webm;x-scheme-handler/chrome;x-scheme-handler/http;x-scheme-handler/https;x-scheme-handler/mailto;
-StartupNotify=true
-Name=Firefox (Work)
-```
+    [Desktop Entry]
+    Version=1.0
+    Type=Application
+    Exec=firefox -P work %u
+    Terminal=false
+    X-MultipleArgs=false
+    Icon=firefox
+    StartupWMClass=firefox
+    Categories=GNOME;GTK;Network;WebBrowser;
+    MimeType=application/json;application/pdf;application/rdf+xml;application/rss+xml;application/x-xpinstall;application/xhtml+xml;application/xml;audio/flac;audio/ogg;audio/webm;image/avif;image/gif;image/jpeg;image/png;image/svg+xml;image/webp;text/html;text/xml;video/ogg;video/webm;x-scheme-handler/chrome;x-scheme-handler/http;x-scheme-handler/https;x-scheme-handler/mailto;
+    StartupNotify=true
+    Name=Firefox (Work)
 
 And then I have the following snippet of code in my system's startup script:
 
-```
-if [ $(date +%u) -lt 6 -a $(date +%H) -lt 16 ]; then
-  xdg-mime default firefox-work.desktop x-scheme-handler/https
-  xdg-mime default firefox-work.desktop x-scheme-handler/http
-  xdg-mime default firefox-work.desktop x-scheme-handler/chrome
-  xdg-mime default firefox-work.desktop application/pdf
-  firefox -P work &
-else
-  xdg-mime default firefox-home.desktop x-scheme-handler/https
-  xdg-mime default firefox-home.desktop x-scheme-handler/http
-  xdg-mime default firefox-home.desktop x-scheme-handler/chrome
-  xdg-mime default firefox-home.desktop application/pdf
-  firefox -P home &
-fi
-```
+    if [ $(date +%u) -lt 6 -a $(date +%H) -lt 16 ]; then
+      xdg-mime default firefox-work.desktop x-scheme-handler/https
+      xdg-mime default firefox-work.desktop x-scheme-handler/http
+      xdg-mime default firefox-work.desktop x-scheme-handler/chrome
+      xdg-mime default firefox-work.desktop application/pdf
+      firefox -P work &
+    else
+      xdg-mime default firefox-home.desktop x-scheme-handler/https
+      xdg-mime default firefox-home.desktop x-scheme-handler/http
+      xdg-mime default firefox-home.desktop x-scheme-handler/chrome
+      xdg-mime default firefox-home.desktop application/pdf
+      firefox -P home &
+    fi
 
 During office hours (Mon-Fri, before 16:00) it assigns the `firefox-work` app to handle all link-related stuff and sets it as a default PDF reader app.
 Otherwise, `firefox-home` is used.
