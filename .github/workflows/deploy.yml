@@ -1,0 +1,36 @@
+name: Deploy
+
+on: workflow_dispatch
+
+jobs:
+  main:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v4
+      with:
+        submodules: true
+        show-progress: false
+
+    - name: Prepare Cider
+      run: chmod +x "${GITHUB_WORKSPACE}/cider/cider.sh"
+
+    - name: Install dependencies
+      run: sudo apt install -y markdown
+
+    - name: Build
+      run: |
+        ${GITHUB_WORKSPACE}/cider/cider.sh -i="${GITHUB_WORKSPACE}/ru/posts" -o="${GITHUB_WORKSPACE}/www" -l="${GITHUB_WORKSPACE}/ru/localization.sh" -c="${GITHUB_WORKSPACE}/ru/config.sh"
+        ${GITHUB_WORKSPACE}/cider/cider.sh -i="${GITHUB_WORKSPACE}/en/posts" -o="${GITHUB_WORKSPACE}/www/en" -l="${GITHUB_WORKSPACE}/en/localization.sh" -c="${GITHUB_WORKSPACE}/en/config.sh"
+
+    - name: Upload to GitHub Pages
+      uses: cpina/github-action-push-to-another-repository@main
+      env:
+        SSH_DEPLOY_KEY: ${{ secrets.SSH_DEPLOY_KEY }}
+      with:
+        source-directory: 'www'
+        destination-github-username: 'torunar'
+        destination-repository-name: 'torunar.github.io'
+        user-email: deployer@localhost
+        target-branch: master
